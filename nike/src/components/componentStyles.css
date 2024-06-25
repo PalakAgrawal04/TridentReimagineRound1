@@ -1,0 +1,13 @@
+.picContainer{
+    height: 60px;
+    width: 60px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.picture{
+    height: 100%;
+    width: 100%;
+}

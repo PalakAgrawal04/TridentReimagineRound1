@@ -1,0 +1,293 @@
+
+.landing{
+    height: 100vh;
+    width: 100%;
+    background-color: #E0FBFF;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    position: relative;
+}
+
+.image{
+    height: 90%;
+    width: 90%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    /* padding-right: 60px;
+    padding-bottom: 30px; */
+}
+
+.shoe{
+    height:800px;
+    width: 700px;
+    rotate: -40deg;
+    /* background-color: blue; */
+    position: absolute;
+    left:25%;
+    z-index: 3;
+}
+.shadow{
+    position: absolute;
+    height: 10px;
+    width: 550px;
+    border-radius: 80%;
+    bottom:10%;
+    right:28%;
+    background-color: black;
+    filter: blur(10px);
+    z-index: 2;
+}
+.circleBlue {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    top: 20%;
+    right: 30%;
+    background-color: #2dd8ff34;
+    backdrop-filter: blur(5px);
+    z-index: 100;
+}
+
+.circlePink {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    bottom: 20%;
+    left: 30%;
+    background-color: #ff38814b;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.title{
+    position: absolute;
+    font-size: 250px;
+    top: 20%;
+    left:5%;
+    color: #FF376A;
+}
+span{
+    color: #00C2DD;
+}
+
+
+
+
+/* 2nd Page */
+.shoeInfo{
+    height: 110vh;
+    width: 100%;
+    background:linear-gradient(to bottom , #E0FBFF, #F4F4F4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.left-info{
+    width: 50%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    /* padding: 0 30px; */
+
+}
+
+.leftSide{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    /* background-color: white; */
+}
+
+.shoeName{
+    height: 50%;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    padding: 25px 0;
+    line-height: 110px;
+}
+
+.shoeName .airmax{
+    margin-left: 10px;
+    font-size: 100px;
+    color: #FF376A;
+    z-index: 50;
+}
+.shoeName .exceeText{
+    font-size: 180px;
+    color: #00C2DD;
+    z-index: 50;
+}
+
+.price{
+    height: 5%;
+    width: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 5px;
+    
+}
+
+.price .priceTag{
+    font-size: 25px;
+    z-index: 50;
+
+}
+
+.infoPara{
+    height: 15%;
+    width: 65%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+
+}
+
+.infoPara .InfoShoes{
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.choice{
+    height: 10%;
+    width: 80%;
+    /* background-color: brown; */
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.choice .color{
+    height: 90%;
+    width: 40%;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:25px;
+    /* padding: 0 5px; */
+
+}
+
+.colorCircle1{
+    height: 30px;
+    width: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.colorCircle2{
+    height: 30px;
+    width: 30px;
+    background-color: #FFD685;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.colorCircle3{
+    height: 30px;
+    width: 30px;
+    background-color: #79F200;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.colorCircle4{
+    height: 30px;
+    width: 30px;
+    background-color: #F198FF;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.choice .size{
+    height: 90%;
+    width: 40%;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.size .sizeChart{
+    height: 40px;
+    width: 70px;
+    padding: 0 10px;
+    font-size: 18px;
+    border: transparent;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0px #008CC8;
+    cursor: pointer;
+}
+
+.btn{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 10px 0;
+    /* background-color: red; */
+}
+
+.btn .buyNow{
+    height: 50px;
+    width: 160px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.right-info{
+    width: 50%;
+    height: 100%;
+    /* background-color:red ; */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 7vw 0;
+}
+
+.morePics{
+    height: 100px;
+    width: 100%;
+    /* background-color: green; */
+    padding-left: 5vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+    z-index: 999;
+}
+
+.new-arrivals{
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+}
