@@ -1,19 +1,27 @@
 
 import './navbarStyles.css';
-// import {Link, Navlink} from 'react-router-dom';
 import logo from '../assets/NikeLogoMain.png';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 
 const Navbar = () => {
+
+    const navigate = useNavigate();
+
+    const handleLogoClick = () => {
+        navigate("/");
+    };
+
     return ( 
         <>
             <div className="navbar">
             <div className="nav-left">
-                <img className="logo" src={logo} alt=""/>
+                <img onClick={handleLogoClick} className="logo" src={logo} alt=""/>
             </div>
             <div className="nav-right">
-                <h4>Shop</h4>
-                <h4>Profile</h4>
+                <Link to="/shoes">Shop</Link>
+                <Link>Profile</Link>
             </div>
         </div>
         </>

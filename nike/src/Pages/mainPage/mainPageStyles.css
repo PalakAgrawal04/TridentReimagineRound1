@@ -152,6 +152,7 @@ span{
 .price .priceTag{
     font-size: 25px;
     z-index: 50;
+    font-weight: 400;
 
 }
 
@@ -167,8 +168,9 @@ span{
 }
 
 .infoPara .InfoShoes{
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
 }
 
 .choice{
@@ -234,7 +236,7 @@ span{
 
 .size .sizeChart{
     height: 40px;
-    width: 70px;
+    width: 80px;
     padding: 0 10px;
     font-size: 18px;
     border: transparent;
@@ -243,6 +245,7 @@ span{
     box-shadow: 4px 4px 0px #008CC8;
     cursor: pointer;
 }
+
 
 .btn{
     height: 10%;

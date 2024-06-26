@@ -1,0 +1,103 @@
+.mainPage{
+    height: 100vh;
+    width: 100%;
+    background-color: #F4F4F4;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.shoePage{
+    height: 85vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.filters{
+    width: 15%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.filterTag{
+    height: 10%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 400;
+}
+
+
+.allFilters{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: transparent;
+
+}
+
+
+
+.selectBox{
+    width: 80%;
+    height: 70px;
+    padding: 0 1vw;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    border: none;
+    border-bottom: 1px solid #B7B7B7;
+    background-color: transparent;
+}
+
+
+.shoes{
+    width: 85%;
+    height: 100%;
+    /* background-color: hotpink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+ 
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    /* background: aqua; */
+}
+
+.row1, .row2, .row3 {
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.row1 {
+    /* background-color: purple; */
+}
+
+.row2 {
+    /* background-color: green; */
+}
+
+.row3 {
+    /* background-color: red; */
+}
+

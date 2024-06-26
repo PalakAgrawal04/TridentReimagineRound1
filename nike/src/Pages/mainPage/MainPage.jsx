@@ -132,7 +132,7 @@ const MainPage = () => {
                             <h1 className="exceeText">Excee</h1>
                         </div>
                         <div className="price">
-                            <p className="priceTag">MRP: ₹8,650</p>
+                            <h1 className="priceTag">MRP: ₹8,650</h1>
                         </div>
                         <div className="infoPara">
                             <p className="InfoShoes">Inspired by the Nike Air Max 90, these kicks deliver a modern twist on a legendary icon through vibrant colours, elongated design lines and distorted proportions for style that defies time.</p>
@@ -146,6 +146,9 @@ const MainPage = () => {
                             </div>
                             <div className="size">
                                 <select className="sizeChart" name="size" id="">
+                                    <option value="" disabled selected>
+                                        Size
+                                    </option>
                                     <option value="">7</option>
                                     <option value="">8</option>
                                     <option value="">9</option>

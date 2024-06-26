@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -8,8 +8,13 @@
     font-family: "Koulen", sans-serif;
 }
 
+
 html,body{
   min-height: 100vh;
   width: 100vw;
   /* overflow: hidden; */
+}
+
+h2,h3,h4,p{
+  font-family: "Inter", sans-serif;
 }
