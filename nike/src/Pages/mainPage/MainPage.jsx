@@ -10,6 +10,8 @@ import exceeBottom from '../PagesAssets/excee 4.png';
 import exceeMain from '../PagesAssets/excee 5.png';
 
 import ShoePics from '../../components/ShoePics';
+import Classics from '../Classics/Classics';
+import { useGSAP } from '@gsap/react';
 
 
 
@@ -39,6 +41,25 @@ const MainPage = () => {
             image: exceeMain,
         },
     ];
+
+    const colorCircles = [
+        {
+            id:1,
+            color:"black",
+        },
+        {
+            id:2,
+            color:"blue",
+        },
+        {
+            id:3,
+            color:"red",
+        },
+        {
+            id:4,
+            color:"pink",
+        },
+    ]
 
     useEffect(() => {
         let yoyoTimeline = gsap.timeline();
@@ -71,47 +92,91 @@ const MainPage = () => {
                 duration: 1
             }, "animeShoe");
 
-        let tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".shoeInfo",
-                start: "0% 95%",
-                end: "50% 50%",
-                // markers: true,
-                scrub: true,
-                onEnter: () => {
-                    // Pause the yoyoing animations when entering the scroll-triggered timeline
-                    yoyoTimeline.pause();
-                },
-                onLeaveBack: () => {
-                    // Resume the yoyoing animations when leaving the scroll-triggered timeline
-                    yoyoTimeline.resume();
-                }
+        ScrollTrigger.matchMedia({
+            // Desktop
+            "(min-width: 651px)": function() {
+                let tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".shoeInfo",
+                        start: "0% 95%",
+                        end: "50% 50%",
+                        // markers: true,
+                        scrub: true,
+                        onEnter: () => {
+                            yoyoTimeline.pause();
+                        },
+                        onLeaveBack: () => {
+                            yoyoTimeline.resume();
+                        }
+                    }
+                });
+
+                tl.to(".shoe", {
+                    top: "90%",
+                    left: "50%",
+                    rotate: "-5deg"
+                }, "shoes")
+                .to(".shadow", {
+                    top: "165%",
+                    right: "10%",
+                    width: "610px"
+                }, "shoes")
+                .to(".circleBlue", {
+                    top: "135%",
+                    right: "7%",
+                    height: "120px",
+                    width: "120px"
+                }, "shoes")
+                .to(".circlePink", {
+                    top: "140%",
+                    left: "45%",
+                    height: "120px",
+                    width: "120px"
+                }, "shoes");
+            },
+            // Mobile
+            "(max-width: 650px)": function() {
+                let tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".shoeInfo",
+                        start: "0% 95%",
+                        end: "50% 50%",
+                        scrub: true,
+                        onEnter: () => {
+                            yoyoTimeline.pause();
+                        },
+                        onLeaveBack: () => {
+                            yoyoTimeline.resume();
+                        }
+                    }
+                });
+
+                tl.to(".shoe", {
+                    top: "112%",
+                    left: "0%",
+                    rotate: "-5deg"
+                }, "shoes")
+                .to(".shadow", {
+                    top: "145%",
+                    right: "5%",
+                    width: "330px"
+                }, "shoes")
+                .to(".circleBlue", {
+                    top: "125%",
+                    right: "-5%",
+                    height: "80px",
+                    width: "80px"
+                }, "shoes")
+                .to(".circlePink", {
+                    top: "130%",
+                    left: "20%",
+                    height: "80px",
+                    width: "80px"
+                }, "shoes");
             }
         });
-
-        tl.to(".shoe", {
-            top: "90%",
-            left: "45%",
-            rotate: "-5deg"
-        }, "shoes")
-        .to(".shadow", {
-            top: "175%",
-            right: "10%",
-            width: "610px"
-        }, "shoes")
-        .to(".circleBlue", {
-            top: "145%",
-            right: "10%",
-            height: "120px",
-            width: "120px"
-        }, "shoes")
-        .to(".circlePink", {
-            top: "140%",
-            left: "60%",
-            height: "120px",
-            width: "120px"
-        }, "shoes");
     }, []);
+    
 
     return (
         <>
@@ -119,6 +184,7 @@ const MainPage = () => {
                 <h1 className="title">AIR MAX <span>EXCEE</span></h1>
                 <div className="image">
                     <img className="shoe" src={exceeAirMax} alt="" data-parallax-speed="0.05" />
+                    <button  className='Shopbutton'>Shop Now</button>
                 </div>
                 <div className="circleBlue" data-parallax-speed="0.08"></div>
                 <div className="circlePink" data-parallax-speed="0.1"></div>
@@ -139,10 +205,20 @@ const MainPage = () => {
                         </div>
                         <div className="choice">
                             <div className="color">
-                                <button className="colorCircle1"></button>
-                                <button className="colorCircle2"></button>
-                                <button className="colorCircle3"></button>
-                                <button className="colorCircle4"></button>
+                                {
+                                    colorCircles.map((circle) => {
+                                        return(
+                                            <>
+                                                <button
+                                                    key={circle.id}
+                                                    className='colorCircle'
+                                                    style={{ backgroundColor: circle.color }}
+                                                ></button>
+                                            </>
+                                        );
+                                    })
+                                }
+                               
                             </div>
                             <div className="size">
                                 <select className="sizeChart" name="size" id="">
@@ -173,6 +249,9 @@ const MainPage = () => {
             </div>
             <div className="new-arrivals">
                 
+            </div>
+            <div className="mainClassics">
+                <Classics/>
             </div>
         </>
     );

@@ -4,12 +4,12 @@ import './layoutStyle.css'
 
 const Layout = () => {
     return ( 
-        <>
+        <body>
             <div className="layout">
                 <Navbar/>
                 <Outlet/>
             </div>
-        </>
+        </body>
      );
 }
  

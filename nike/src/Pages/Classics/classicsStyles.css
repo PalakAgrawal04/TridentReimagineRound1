@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.part-1{
+    height: 110vh;
+    width: 100%;
+    /* background-color: violet; */
+    background-color: #F4F4F4;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    /* z-index: 999; */
+}
+
+.top-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top:7%;
+    perspective: 800px;
+    perspective-origin: top;
+}
+
+.topper{
+    height: 100%;
+    width: 100%;
+}
+
+.top-content .topper h1{
+    font-size: 7vw;
+}
+
+.bottom-content{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 7%;
+    perspective: 800px;
+    perspective-origin: bottom;
+}
+
+.lower{
+    height: 100%;
+    width: 100%;
+    align-items: center; 
+}
+
+.bottom-content .lower h1{
+    font-size: 7vw;
+}
+
+
+
+video{
+    width: 50%;
+    height: 60%;
+}
+
+/* img{
+    width: 50%;
+    height: 60%;
+} */
+.part-2{
+    height: 100vh;
+    width: 100%;
+    background-color: green;
+}
+.moreBenefits{
+    height: 100vh;
+    width: 100%;
+    background-color: violet;
+}
+

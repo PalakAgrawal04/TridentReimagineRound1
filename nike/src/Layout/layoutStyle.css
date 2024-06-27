@@ -4,9 +4,10 @@
     box-sizing: border-box;
 }
 
-html,body{
+body{
     min-height: 100vh;
     width: 100vw;
+    background-color: red;
 }
 
 .layout{
@@ -17,4 +18,40 @@ html,body{
     flex-direction: column;
     justify-content: start;
     align-items: start;
+}
+/* background-color: #E0FBFF; */
+
+/* @media (max-width: 500px) {
+    html,body{
+        height: 700px;
+        width: 100%;
+        background-color: black;
+    }
+    .layout{
+        min-height: 700px;
+        width: 600px;
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+} */
+@media (max-width: 414px) {
+    html,body{
+        height: 500px;
+        width: 100%;
+        background-color: black;
+    }
+    .layout{
+        height: 100%;
+        width: 384px;
+        /* background-color: #E0FBFF; */
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        overflow: hidden;
+    }
 }

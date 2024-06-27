@@ -2,7 +2,7 @@
     height: 100px;
     width: 100%;
     position: fixed;
-    z-index: 99;
+    z-index: 999;
     /* background-color: violet; */
     display: flex;
     justify-content: space-between;
@@ -35,4 +35,68 @@ a{
     text-decoration: none;
     color: black;
     font-size: 18px;
+}
+.menuIcon{
+    display: none;
+}
+.resNavbar{
+    display: none;
+}
+
+@media (max-width: 650px){
+    .navbar{
+        height: 100px;
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+
+    }
+
+    .nav-left{
+        height: 100%;
+        width: 30%;
+        /* background-color: aqua; */
+    }
+
+    a{
+        display: none;
+    }
+    .menuIcon{
+        display: block;
+        z-index: 1099;
+    }
+    .resNavbar{
+        min-height: 100vh;
+        width: 60%;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+
+    }
+
+    .links{
+        height: 600px;
+        width: 100%;
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        z-index: 999;
+        padding: 0 7vw;
+        gap: 10px;
+
+    }
+    .resLinks{
+        font-size: 30px;
+        display: block;
+        font-weight: 200;
+    }
 }
