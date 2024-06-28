@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+.page4{
+    height: 70%;
+    min-width: 100vw;
+    z-index: 9;
+    position: relative;
+    /* padding: 170px 100px; */
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.elem{
+    height: 80px;
+    width: 100%;
+    /* background-color: salmon; */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* z-index: 99; */
+}
+.elem img{
+    position: absolute;
+    opacity: 0;
+    transition: all ease-out 0.5s;
+    transform: translateY(10%) rotate(2deg);
+    z-index: -1;
+    width: 300px;
+    /* height: 100%; */
+}
+.elem img:nth-child(1){
+    left: 2%;
+}
+.elem img:nth-child(3){
+    right: 5%;
+}
+.text-div{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+    /* background-color: blanchedalmond; */
+    opacity: 5;
+}
+.elem h1{
+    font-size: 5vw;
+    font-weight: 600;
+    color: white;
+    transition: all ease-out 0.5s;
+    font-family: "Koulen", sans-serif;
+    letter-spacing: 5px;
+    cursor: pointer;
+    z-index: 10;
+
+}
+
+.elem:hover h1{
+    /* transform: translateY(-100%); */
+    color: #FF376A;
+}
+.elem:hover img{
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+
+}

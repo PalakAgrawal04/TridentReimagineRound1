@@ -56,10 +56,9 @@ const Navbar = () => {
                     <img onClick={handleLogoClick} className="logo" src={logo} alt=""/>
                 </div>
                 <div className="nav-right">
-                    <Link to="/shoes">Shop</Link>
-                    <Link>Profile</Link>
-                    {/* <CgMenuRightAlt size={30} className='menuIcon' />
-                    <IoClose /> */}
+                    <Link  to="/shoes">Shop</Link>
+                    <Link >Profile</Link>
+                    
                     {
                         open ? <IoClose className='menuIcon' size={30} onClick={handleOpen} /> : <CgMenuRightAlt size={30} className='menuIcon' onClick={handleOpen} />
                     }

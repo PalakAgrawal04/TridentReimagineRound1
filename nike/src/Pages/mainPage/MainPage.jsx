@@ -59,7 +59,8 @@ const MainPage = () => {
             id:4,
             color:"pink",
         },
-    ]
+    ];
+    
 
     useEffect(() => {
         let yoyoTimeline = gsap.timeline();
