@@ -46,34 +46,36 @@ const ShopBySport = () => {
     return (
         <>
             <div class="page4">
-                <div class="elem basketball">
-                    <img src={basketball} alt=""/>
-                    <div class="text-div basketball">
-                        <h1>Basketball</h1>
+                <div className="page4-content">
+                    <div class="elem basketball">
+                        <img src={basketball} alt=""/>
+                        <div class="text-div basketball">
+                            <h1>Basketball</h1>
+                        </div>
                     </div>
-                </div>
-                <div class="elem football">
-                    <div class="text-div football">
-                        <h1>Football</h1>
+                    <div class="elem football">
+                        <div class="text-div football">
+                            <h1>Football</h1>
+                        </div>
+                        <img src={football} alt=""/>
                     </div>
-                    <img src={football} alt=""/>
-                </div>
-                <div class="elem golf">
-                    <img src={golf} alt=""/>
-                    <div class="text-div golf">
-                        <h1>Golf</h1>
+                    <div class="elem golf">
+                        <img src={golf} alt=""/>
+                        <div class="text-div golf">
+                            <h1>Golf</h1>
+                        </div>
                     </div>
-                </div>
-                <div class="elem tennis">
-                    <div class="text-div tennis">
-                        <h1>Tennis</h1>
+                    <div class="elem tennis">
+                        <div class="text-div tennis">
+                            <h1>Tennis</h1>
+                        </div>
+                        <img src={tennis} alt=""/>
                     </div>
-                    <img src={tennis} alt=""/>
-                </div>
-                <div class="elem trail">
-                    <img src={trail} alt=""/>
-                    <div class="text-div trail">
-                        <h1>Trail</h1>
+                    <div class="elem trail">
+                        <img src={trail} alt=""/>
+                        <div class="text-div trail">
+                            <h1>Trail</h1>
+                        </div>
                     </div>
                 </div>
             </div>

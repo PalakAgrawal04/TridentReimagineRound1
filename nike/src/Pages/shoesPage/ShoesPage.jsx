@@ -95,7 +95,7 @@ const ShoesPage = () => {
                 },
             ]
         },
-    ]
+    ];
 
     
     return ( 
