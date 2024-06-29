@@ -67,6 +67,7 @@ a{
     .menuIcon{
         display: block;
         z-index: 1099;
+        color: black;
     }
     .resNavbar{
         min-height: 100vh;
@@ -98,5 +99,7 @@ a{
         font-size: 30px;
         display: block;
         font-weight: 200;
+        color: black;
+
     }
 }

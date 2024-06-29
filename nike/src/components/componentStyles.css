@@ -127,3 +127,99 @@ h3{
     z-index:20;
 }
 
+/* CLASSIC SPOTLIGHT CARDS */
+
+.card-container{
+    height: 80%;
+    width: 400px;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    border:none;
+    border-radius: 10px;
+}
+.shadowShoes{
+    position: absolute;
+    height: 10px;
+    width: 350px;
+    border-radius: 80%;
+    bottom:3%;
+    left:6%;
+    background-color: black;
+    filter: blur(10px);
+    z-index: 2;
+}
+
+.card-Name{
+    height: 60%;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.spotlight-images{
+    position: absolute;
+    bottom: 0;
+    height: 250px;
+    width: 100%;
+    z-index: 10;
+    /* background-color: yellow; */
+
+}
+
+@media (max-width:650px) {
+
+    .card-container{
+        height: 80%;
+        width: 350px;
+        /* background-color: black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+        border:none;
+        border-radius: 10px;
+    }
+    .shadowShoes{
+        position: absolute;
+        height: 10px;
+        width: 300px;
+        border-radius: 80%;
+        bottom:3%;
+        left:6%;
+        background-color: black;
+        filter: blur(10px);
+        z-index: 2;
+    }
+    
+    .card-Name{
+        height: 60%;
+        width: 100%;
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+    }
+    
+    .spotlight-images{
+        position: absolute;
+        bottom: 0;
+        height: 230px;
+        width: 100%;
+        z-index: 10;
+        /* background-color: yellow; */
+    
+    }
+
+}
+
+
+

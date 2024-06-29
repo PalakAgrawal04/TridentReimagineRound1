@@ -8,6 +8,8 @@ body{
     min-height: 100vh;
     width: 100vw;
     /* background-color: blue; */
+    scroll-behavior: smooth;
+    user-select: none;
 }
 .landing{
     height: 100vh;
@@ -291,15 +293,15 @@ span{
 .new-arrivals{
     height: 100vh;
     width: 100%;
-    /* background-color: red; */
+    background-color: #F4F4F4;
 }
 
 .mainClassics{
     min-height: 100vh;
-    width: 100%;
+    min-width: 100vw;
     background-color: #F4F4F4;
     position: relative;
-    overflow: hidden;
+    overflow-x: scroll;
 }
 
 
