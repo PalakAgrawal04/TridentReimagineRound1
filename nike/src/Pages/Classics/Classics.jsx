@@ -49,6 +49,7 @@ const Classics = () => {
         { id: 3, name: "Dunks", image: dunkMain, bgColor: "#FF6B00", nameColor: "#0074ee" },
         { id: 4, name: "Air Force 1", image: nextNature, bgColor: "#00d4c8", nameColor: "white" },
     ];
+    
 
     useEffect(() => {
         const cursor = document.querySelector(".cursor");

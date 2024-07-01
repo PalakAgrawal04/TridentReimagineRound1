@@ -16,7 +16,7 @@ const FooterLinks = ({linkName, allLink}) => {
                                 </>
                             );
                         })
-                    }a
+                    }
                 </div>
             </div>
         </>

@@ -55,9 +55,9 @@ const ShopBySport = () => {
     
     return (
         <>
-            <div class="page4">
+            <div className="page4">
                 <div className="page4-content">
-                    <div class="elem basketball">
+                    <div className="elem basketball">
                         <img src={basketball1} 
                         style={{
                             height:"330px",
@@ -65,7 +65,7 @@ const ShopBySport = () => {
                             borderRadius:"10px",
                             }}
                         alt=""/>
-                        <div class="text-div basketball">
+                        <div className="text-div basketball">
                             <h1>Basketball</h1>
                         </div>
                         <img src={basketball} 
@@ -76,7 +76,7 @@ const ShopBySport = () => {
                             }}
                         alt=""/>
                     </div>
-                    <div class="elem football">
+                    <div className="elem football">
                     <img src={football1} 
                     style={{
                         height:"520px",
@@ -84,7 +84,7 @@ const ShopBySport = () => {
                         borderRadius:"10px",
                         }}
                     alt=""/>
-                        <div class="text-div football">
+                        <div className="text-div football">
                             <h1>Football</h1>
                         </div>
                         <img src={football} 
@@ -95,7 +95,7 @@ const ShopBySport = () => {
                             }}
                         alt=""/>
                     </div>
-                    <div class="elem golf">
+                    <div className="elem golf">
                         <img src={golf} 
                         style={{
                             height:"300px",
@@ -103,7 +103,7 @@ const ShopBySport = () => {
                             borderRadius:"10px",
                             }}
                         alt=""/>
-                        <div class="text-div golf">
+                        <div className="text-div golf">
                             <h1>Golf</h1>
                         </div>
                         <img src={golf1} 
@@ -114,7 +114,7 @@ const ShopBySport = () => {
                             }}
                         alt=""/>
                     </div>
-                    <div class="elem tennis">
+                    <div className="elem tennis">
                     <img src={tennis} 
                     style={{
                         height:"400px",
@@ -122,7 +122,7 @@ const ShopBySport = () => {
                         borderRadius:"10px",
                         }}
                     alt=""/>
-                        <div class="text-div tennis">
+                        <div className="text-div tennis">
                             <h1>Tennis</h1>
                         </div>
                         <img src={tennis1} 
@@ -133,14 +133,14 @@ const ShopBySport = () => {
                             }}
                         alt=""/>
                     </div>
-                    <div class="elem trail">
+                    <div className="elem trail">
                         <img src={trail} style={{
                             height:"400px",
                             width:"350px",
                             borderRadius:"10px",
                             }}
                         alt=""/>
-                        <div class="text-div trail">
+                        <div className="text-div trail">
                             <h1>Trail</h1>
                         </div>
                         <img src={trail1} 
