@@ -132,6 +132,7 @@
         /* transform: translateY(10%) rotate(2deg); */
         z-index: -4;
         width: 300px;
+        display: none;
         /* height: 100%; */
     }
     .elem img:nth-child(1){
@@ -153,7 +154,7 @@
         opacity: 5;
         padding: 0 2vh;
         border: 4px solid white;
-        box-shadow: 5px 5px 0px #ffffff;
+        box-shadow: 3px 3px 0px #ffffff;
     }
     .elem h1{
         font-size: 10vw;

@@ -2,6 +2,10 @@ import "./ShoesPageStyles.css";
 import { CiFilter } from "react-icons/ci";
 import AllShoes from "./AllShoes";
 import FilterDrop from "./FilterDrop";
+import { useEffect } from "react";
+import gsap from "gsap";
+import nikeBlack from "../PagesAssets/NikeLogoMain.png";
+import { ScrollTrigger } from "gsap/all";
 const ShoesPage = () => {
 
     const filterArr=[
@@ -97,7 +101,45 @@ const ShoesPage = () => {
         },
     ];
 
-    
+    gsap.registerPlugin(ScrollTrigger);
+
+
+    useEffect(() => {
+
+        const changeImageSrc = (selector, newSrc) => {
+            const imgElement = document.querySelector(selector);
+            if (imgElement) {
+                imgElement.src = newSrc;
+            }
+        };
+
+        ScrollTrigger.matchMedia({
+            // Desktop
+            "(min-width: 651px)": function() {
+                changeImageSrc(".nav-left img", nikeBlack);
+                gsap.to(".footer-main", { backgroundColor: "#F4F4F4" });
+                gsap.to(".footer-content", { backgroundColor: "#FFF" });
+                gsap.to(".heading-links", { color: "#000" });
+                gsap.to(".mainLinks", { color: "#000" });
+                gsap.to(".copyRigths", { color: "#3b3b3b" });
+                gsap.to(".nav-right a", { color: "#000" });
+                changeImageSrc(".nikeFooterLogo", nikeBlack);
+            },
+            // Mobile
+            "(max-width: 650px)": function() {
+                
+                changeImageSrc(".nav-left img", nikeBlack);
+                gsap.to(".footer-main", { backgroundColor: "#F4F4F4" });
+                gsap.to(".footer-content", { backgroundColor: "#FFF" });
+                gsap.to(".heading-links", { color: "#000" });
+                gsap.to(".mainLinks", { color: "#000" });
+                gsap.to(".copyRigths", { color: "#3b3b3b" });
+                changeImageSrc(".foot-left img", nikeBlack);
+            }
+        });
+
+        
+    },[]);
     return ( 
         <>
             <div className="mainPage">

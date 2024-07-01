@@ -108,7 +108,7 @@ span{
 .shoeInfo{
     height: 110vh;
     width: 100%;
-    background:linear-gradient(to bottom , #E0FBFF, #F4F4F4);
+    background-color: #E0FBFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,8 +292,10 @@ span{
 
 .new-arrivals{
     height: 100vh;
-    width: 100%;
-    background-color: #F4F4F4;
+    width: 100vw;
+    /* background-color: #F4F4F4; */
+    background:linear-gradient(to bottom , #E0FBFF, #F4F4F4);
+    overflow-x: scroll;
 }
 
 .mainClassics{
@@ -301,7 +303,7 @@ span{
     min-width: 100vw;
     background-color: #F4F4F4;
     position: relative;
-    overflow-x: scroll;
+    overflow: hidden;
 }
 
 
@@ -396,7 +398,7 @@ span{
     .shoeInfo{
         height: 100vh;
         width: 100%;
-        background-color: red;
+        background-color: #E0FBFF;
         /* background:linear-gradient(to bottom , #E0FBFF, #F4F4F4); */
         display: flex;
         flex-direction: column-reverse;
@@ -577,6 +579,14 @@ span{
         align-items: center;
         gap: 30px;
         z-index: 999;
+    }
+
+    .new-arrivals{
+        height: 100vh;
+        width: 100vw;
+        /* background-color: #F4F4F4; */
+        background:linear-gradient(to bottom , #E0FBFF, #F4F4F4);
+        overflow-x: scroll;
     }
 
 

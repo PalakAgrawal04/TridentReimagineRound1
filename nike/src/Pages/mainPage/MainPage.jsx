@@ -12,12 +12,17 @@ import exceeMain from '../PagesAssets/excee 5.png';
 import ShoePics from '../../components/ShoePics';
 import Classics from '../Classics/Classics';
 import { useGSAP } from '@gsap/react';
+import NewArrvials from '../NewArrivals/NewArrivals';
+import { useRef } from 'react';
+
 
 
 
 gsap.registerPlugin(ScrollTrigger);
 
 const MainPage = () => {
+
+    const landRef = useRef();
 
     const exceePics = [
         {
@@ -90,7 +95,8 @@ const MainPage = () => {
                 filter: "blur(5px)",
                 yoyo: true,
                 repeat: -1,
-                duration: 1
+                delay: 1,
+                duration:1
             }, "animeShoe");
 
         ScrollTrigger.matchMedia({
@@ -176,6 +182,10 @@ const MainPage = () => {
                 }, "shoes");
             }
         });
+        return () => {
+            yoyoTimeline.kill();
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        };
     }, []);
     
 
@@ -185,13 +195,19 @@ const MainPage = () => {
                 <h1 className="title">AIR MAX <span>EXCEE</span></h1>
                 <div className="image">
                     <img className="shoe" src={exceeAirMax} alt="" data-parallax-speed="0.05" />
-                    <button  className='Shopbutton'>Shop Now</button>
+                    <button
+                    onClick={() => {
+                        landRef.current?.scrollIntoView({
+                            behavior:"smooth"
+                        });
+                    }}
+                    className='Shopbutton'>Shop Now</button>
                 </div>
                 <div className="circleBlue" data-parallax-speed="0.08"></div>
                 <div className="circlePink" data-parallax-speed="0.1"></div>
                 <div className="shadow" data-parallax-speed="0.03"></div>
             </div>
-            <div className="shoeInfo">
+            <div ref={landRef} className="shoeInfo">
                 <div className="left-info">
                     <div className="leftSide">
                         <div className="shoeName">
@@ -249,7 +265,7 @@ const MainPage = () => {
                 </div>
             </div>
             <div className="new-arrivals">
-                
+                <NewArrvials/>
             </div>
             <div className="mainClassics">
                 <Classics/>

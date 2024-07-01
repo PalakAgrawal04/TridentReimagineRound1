@@ -19,6 +19,8 @@ import nextNature from "../../assets/nextNature.png";
 import poster from "../PagesAssets/nikePoster.jpeg";
 import nikeSportsPoster from "../PagesAssets/nikeSportsPoster.jpeg";
 import nikeArt from "../PagesAssets/nikeArt.jpeg";
+import nikeWhite from "../../assets/nikeWhiteLogo.png";
+import nikeBlack from "../../assets/NikeLogoMain.png"
 
 
 
@@ -52,7 +54,6 @@ const Classics = () => {
         const cursor = document.querySelector(".cursor");
         const navLinker = document.querySelectorAll("a");
         const boxes = document.querySelectorAll(".contentBene");
-        const icons = document.querySelector(".menuIcon");
         const resNav = document.querySelectorAll(".resNavbar");
         const reslinks = document.querySelectorAll(".resLinks");
 
@@ -80,6 +81,7 @@ const Classics = () => {
             });
         });
 
+        
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".part-1",
@@ -88,23 +90,45 @@ const Classics = () => {
                 pin: true,
                 pinSpacing: true,
                 scrub: true,
+                
                 onEnter: () => {
-                    gsap.to(".part-1", { backgroundColor: "black" });
+                
+                    gsap.to(".part-1", { backgroundColor: "#000" });
                     gsap.to(resNav, { backgroundColor: "black" });
                     gsap.to(".topper h1", { color: "white" });
                     gsap.to(".lower h1", { color: "white" });
                     gsap.to(navLinker, { color: "white" });
-                    gsap.to(icons, { color: "white" });
+                    gsap.to(".menuIcon", { color: "white" });
                     gsap.to(reslinks, { color: "white" });
+                    gsap.to(".footer-main", { backgroundColor: "#000" });
+                    gsap.to(".heading-links", { color: "#FFF" });
+                    gsap.to(".mainLinks ", { color: "#FFF" });
+                    gsap.to(".footer-content", {backgroundColor:"#1b1b1b"});
+
+                   const logoWhite = document.querySelector(".logo");
+                    let footLeft = document.querySelector(".foot-left img");
+                    footLeft.src = nikeWhite;
+                    logoWhite.src = nikeWhite;
+
                 },
+
                 onLeaveBack: () => {
                     gsap.to(".part-1", { backgroundColor: "" });
                     gsap.to(resNav, { backgroundColor: "" });
                     gsap.to(".topper h1", { color: "" });
                     gsap.to(".lower h1", { color: "" });
                     gsap.to(navLinker, { color: "" });
-                    gsap.to(icons, { color: "" });
+                    gsap.to(".menuIcon", { color: "black" }); 
                     gsap.to(reslinks, { color: "" });
+                    gsap.to(".footer-main", { backgroundColor: "#FFF" });
+                    gsap.to(".heading-links", { color: "#000" });
+                    gsap.to(".mainLinks ", { color: "#000" });
+
+                    const logo = document.querySelector(".nav-left img");
+                    let footLeft = document.querySelector(".foot-left img");
+                    logo.src = nikeBlack;
+                    footLeft.src = nikeBlack;
+                    
                 }
             }
         });
@@ -131,7 +155,11 @@ const Classics = () => {
 
         return () => {
             document.removeEventListener("mousemove", handleMouseMove);
-        };
+            boxes.forEach((elem) => {
+                elem.removeEventListener("mouseenter", () => { });
+                elem.removeEventListener("mouseleave", () => { });
+            });
+        }
     }, []);
 
     return (

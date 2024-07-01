@@ -90,17 +90,6 @@
     align-items: center;
 }
 
-.row1 {
-    /* background-color: purple; */
-}
-
-.row2 {
-    /* background-color: green; */
-}
-
-.row3 {
-    /* background-color: red; */
-}
 
 
 @media (max-width: 700px) {

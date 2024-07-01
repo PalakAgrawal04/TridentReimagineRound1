@@ -45,7 +45,7 @@ const Navbar = () => {
 
         // Cleanup GSAP timeline
         return () => {
-            t.kill();
+            t.clear();
         };
     }, [open]);
 
