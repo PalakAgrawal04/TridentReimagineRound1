@@ -73,12 +73,7 @@ const MainPage = () => {
         
 
         yoyoTimeline
-            .from(".title",{
-                y:"10px",
-                opacity:0,
-                delay:6,
-                stagger:0.2,
-            })
+            
             .to(".shoe", {
                 y: "-30px",
                 yoyo: true,

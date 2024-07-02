@@ -19,6 +19,8 @@ import nextNature from "../../assets/nextNature.png";
 import poster from "../PagesAssets/nikePoster.jpeg";
 import nikeSportsPoster from "../PagesAssets/nikeSportsPoster.jpeg";
 import nikeArt from "../PagesAssets/nikeArt.jpeg";
+import nikeVertical from "../PagesAssets/nikeVerticalMain.png";
+
 import nikeWhite from "../../assets/nikeWhiteLogo.png";
 import nikeBlack from "../../assets/NikeLogoMain.png"
 
@@ -37,9 +39,9 @@ const Classics = () => {
 
     const benefits = [
         { id: 1, content: "Your Exclusive Access", image: flyingNike },
-        { id: 2, content: "Your Customisation service", image: cny },
+        { id: 2, content: "Your Customisation service", image: ppl },
         { id: 3, content: "How we say thank you", image: neon },
-        { id: 4, content: "A celebration of you", image: ppl },
+        { id: 4, content: "A celebration of you", image: cny },
         { id: 5, content: "Your ultimate sneaker community", image: flyingNike },
     ];
 
@@ -81,6 +83,26 @@ const Classics = () => {
                 cursor.style.backgroundImage = "none";
             });
         });
+
+            let t2 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".classic-part",
+                    start: "20% 50%",
+                    end: "50% 50%",
+                }
+            })
+            t2.from(".spotlightTitle h1", {
+                y:"200px",
+                duration:0.5,
+            })
+            .from(".scroll-cards", {
+                stagger:0.2,
+                duration:0.3,
+                opacity:0,
+                y:"50px"
+            })
+    
+            
 
         
         let tl = gsap.timeline({
@@ -144,9 +166,9 @@ const Classics = () => {
             duration: 1
         },"rot")
         .to("video", {
-            height: "100%",
-            width: "100vw",
-            duration: 5
+            height: "90%",
+            width: "90%",
+            duration:5
         })
         .to(".posterImage", {
             height: "80%",

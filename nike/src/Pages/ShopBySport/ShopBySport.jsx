@@ -32,6 +32,7 @@ const ShopBySport = () => {
             }
         };
 
+
         ScrollTrigger.matchMedia({
             // Desktop
             "(min-width: 651px)": function() {

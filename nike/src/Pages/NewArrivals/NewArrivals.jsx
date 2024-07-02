@@ -1,10 +1,12 @@
 import "./newArrivalsStyles.css";
 import pegasus41 from "../PagesAssets/nikePegasus41.png";
 import precision7 from "../PagesAssets/Precision7.png";
-import airMax270 from "../PagesAssets/airMax270.png";
+import airMax270 from "../PagesAssets/airMax270Shoes.png";
 import greenNike from "../PagesAssets/greenPegasus41.png";
 
 import NewShoesCard from "../../components/NewShoesCard";
+import { useEffect } from "react";
+import gsap from "gsap";
 
 const NewArrvials = () => {
 
@@ -15,7 +17,7 @@ const NewArrvials = () => {
             nameColor: "black",
             number:"270",
             numColor: "#79D700",
-            shoeImg : greenNike,
+            shoeImg : airMax270,
             cardColor:"#B3FF67"
         },
         {
@@ -45,7 +47,29 @@ const NewArrvials = () => {
         //     shoeImg : greenNike,
         //     cardColor:"#B3FF67"
         // },
-    ]
+    ];
+
+    useEffect(() => {
+        let t1 = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".mainContainer",
+                start: "20% 50%",
+                end: "50% 50%",
+            }
+        })
+        t1.from(".titleNew h1", {
+            y:"100px",
+            duration:0.5,
+        })
+        .from(".scrollCards", {
+            stagger:0.2,
+            duration:0.3,
+            opacity:0,
+            y:"50px"
+        })
+
+        
+    },[]);
     return ( 
         <>
             <div className="mainContainer">

@@ -12,7 +12,7 @@ const NewShoesCard = ({name, nameColor,num, numColor, image, cardColor}) => {
 
                 <div className="newDesc">
                     <h1 className="newName" style={{color:nameColor}}>{name}</h1>
-                    <Link className="buyNowBtn">Buy Now</Link>
+                    <Link to="/shoes" className="buyNowBtn">Buy Now</Link>
                 </div>
 
             </div>
